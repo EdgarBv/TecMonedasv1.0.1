@@ -1,0 +1,23 @@
+.btn {
+    background-color: transparent;
+    border: 2px solid rgb(0 12 66);
+    border-radius: 0.6em;
+    align-self: center;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.btn:hover, 
+.btn:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.logReg {
+    border-color: rgb(237 190 27);
+    color: #fff;
+    transition: all 150ms ease-in-out;
+}
+.logReg:hover {
+    box-shadow: 0 0 10px 0 rgb(237 190 27) inset, 0 0 10px 2px rgb(237 190 27);
+}

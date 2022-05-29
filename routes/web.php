@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\TicketController;
 
+//Livewire
+use App\Http\Livewire\CrudTickets;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin/tickets',[TicketController::class, 'view']) 
+Route::get('/admin/tickets', CrudTickets::class) 
     ->name ('admin.view');
 
 Route::post('/admin/create', [TicketController::class, 'store'])

@@ -39,21 +39,21 @@
                 <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                     <div style="text-align: center;">
                         <h2>ELIGE EL CANJE QUE QUIERAS HACER</h2>
-                        <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>                   
+                        <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>                   
                     </div>
 
                     @foreach (
                         $swaps as $act
                     )
                     <div style="box-shadow: 0 4px 8px 0 rgba(212,175,55,0.5); transition: 0.3s;">
-                        <div style="padding: 7px 16px; margin: 15px 8px; line-height: 25px; text-align: center;">
+                        <div style="padding: 7px 16px; margin: 8px 8px; line-height: 25px; text-align: center;">
                             <h4>Tipo de canje: <b>{{$act->name}}</b></h4>
                             <p>Precio: ${{$act->cost}} tm</p>
                             <p>Descripción: {{$act->description}}</p>
                             <form action="{{route('admin.store')}}" method="POST">
                                 @csrf
                                 <input hidden="true" style="color: #000;" type="text" name="id" placeholder="Usuario" autocomplete="off" value="{{ Auth::user()->id }}">
-                                <input hidden="true" style="color: #000;" type="text" name="folio" placeholder="Folio" autocomplete="off" value="<?php echo uniqid(); ?>">
+                                <input hidden="true" style="color: #000;" type="text" name="folio" placeholder="Folio" autocomplete="off" value="<?php echo mt_rand(10000000, 99999999) ?>">
                                 <input hidden="true" style="color: #000;" type="text" name="tipo" placeholder="Tipo de canje" autocomplete="off" value="{{ $act -> name }}">
                                 <input hidden="true" style="color: #000;" type="text" name="expiracion" placeholder="Expiración" autocomplete="off" value="
                                     <?php 

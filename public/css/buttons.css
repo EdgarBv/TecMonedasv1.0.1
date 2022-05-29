@@ -1,0 +1,45 @@
+.buttons {
+    text-align: center;
+}
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(0 12 66);
+    border-radius: 0.6em;
+    color: rgb(0 12 66);
+    cursor: pointer;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.btn:hover, 
+.btn:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.login, 
+.register,
+.dashboard {
+    border-color: rgb(237 190 27);
+    color: #fff;
+    transition: all 150ms ease-in-out;
+}
+.login:hover, 
+.register:hover,
+.dashboard:hover  {
+    box-shadow: 0 0 10px 0 rgb(237 190 27) inset, 0 0 10px 4px rgb(237 190 27);
+}
