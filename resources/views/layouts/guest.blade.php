@@ -12,14 +12,16 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/buttons2.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/buttons_log.css') }}">
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body>
+    <body style="background-color: rgb(0 12 66);">
         <div>
             {{ $slot }}
         </div>
     </body>
 </html>
+
+

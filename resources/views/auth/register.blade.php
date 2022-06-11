@@ -5,7 +5,7 @@
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 <div class="text-center text-white underline underline-offset-2">
                     Volver a inicio
-                </div> 
+                </div>
             </a>
         </x-slot>
 
@@ -22,6 +22,12 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
+            <div class="mt-4 mb-4 hidden">
+                <x-label for="active_account" :value="__('Cuenta')" />
+
+                <x-input id="active_account" class="block mt-1 w-full" type="text" name="active_account" value="false" required autofocus />
+            </div>
+            
             <!-- Career -->
             <div class="mt-4 mb-4">
                 <x-label for="career" :value="__('Carrera')" />
@@ -45,7 +51,7 @@
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Contraseña')" />
+                <x-label for="password" :value="__('Contrase単a')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -55,7 +61,7 @@
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirmar contraseña')" />
+                <x-label for="password_confirmation" :value="__('Confirmar contrase単a')" />
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"

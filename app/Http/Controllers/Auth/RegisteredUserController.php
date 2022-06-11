@@ -38,6 +38,7 @@ class RegisteredUserController extends Controller
             'career' => ['required', 'string', 'max:255'],
             'date_of_birth' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'active_account' => ['required', 'string', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -46,8 +47,10 @@ class RegisteredUserController extends Controller
             'career' => $request->career,
             'date_of_birth' => $request->date_of_birth,
             'email' => $request->email,
+            'active_account' => $request->active_account,
             'password' => Hash::make($request->password),
         ]);
+        
         $user->assignRole('visitator');
 
         event(new Registered($user));

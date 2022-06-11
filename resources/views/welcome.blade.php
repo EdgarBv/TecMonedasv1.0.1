@@ -9,10 +9,9 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
 
     <!-- Styles -->
-
+    <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
     <style>
         html {
             line-height: 1.15;
@@ -120,7 +119,7 @@
             color: rgba(255,0,0,0.7);   
         }
 
-        @media (min-width: 200px) {
+        @media (min-width:200px) {
             .sm\:block {
                 display: block
             }
@@ -133,8 +132,10 @@
                 padding-top: 5rem
             }
         }
-
         @media screen and (max-width: 500px) {
+            .desc {
+                margin: 0 0 !important;
+            }
             .desc p {
                 font-size: 1rem;
             }
@@ -147,8 +148,8 @@
     <div style="background-color: rgb(0 12 66);"
         class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-1">
 
-        <div class="">
-            <div id="name" style="color: white; text-align: center; margin-top: 10%;">
+        <div class="max-w-6xl sm:px-6 lg:px-8">
+            <div id="name" style="color: white; text-align: center; margin-top: 8%;">
                 <h1>BIENVENIDO A<span>TECMONEDA</span></h1>
                 <img src="https://i.ibb.co/m9XGm8k/logo-tecmoneda.png" width="20%" class="mt-4">
             </div>
@@ -159,17 +160,16 @@
                     @auth
                     <button class="btn dashboard">
                         <a href="{{ url('/dashboard') }}"
-                        class="text-xl">Dashboard</a>
+                        class="text-xl">Ir al panel</a>
                     </button>
-                    
                     @else
                     <button class="btn login">
-                        <a href="{{ route('login') }}" class="text-xl">Inicia sesión</a>
+                        <a href="{{ route('login') }}" class="text-xl">Inicia sesi贸n</a>
                     </button>
 
                     @if (Route::has('register'))
                     <button class="btn register">
-                        <a href="{{ route('register') }}" class="ml-4 text-xl">Regístrate</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-xl">Reg铆strate</a>
                     </button>
                     @endif
                     @endauth
@@ -177,13 +177,12 @@
                 @endif
             </div>
 
-            <div class="desc" style="color: #fff; margin: 50px; text-align: center; font-size: 1.3rem;">
-                <p>Participa en los eventos que organiza el Tecnológico de Motul, cumple con tus actividades y obtén
-                    buenos promedios para poder conseguir TecMonedas totalmente gratis. Podrás usarlas con los canjes de
+            <div class="desc" style="color: #fff; margin: 40px; text-align: center; font-size: 1.3rem;">
+                <p>Participa en los eventos que organiza el Tecnol贸gico de Motul y cumple con tus actividades para poder conseguir TecMonedas totalmente gratis. Podr谩s usarlas en los canjes de
                     este sitio.</p>
             </div>
         </div>
+        <div style="color: #fff; position: fixed; bottom: 0;">&copy; 2022 Tecmonedas</div>
     </div>
 </body>
-
 </html>

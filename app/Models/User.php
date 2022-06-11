@@ -23,6 +23,7 @@ class User extends Authenticatable
         'career',
         'date_of_birth',
         'email',
+        'active_account',
         'password',
     ];
 
@@ -51,5 +52,13 @@ class User extends Authenticatable
 
     public function swap() {
         return $this->hasMany(Swap::class);
+    }
+
+    public function account() {
+        return $this->hasMany(Account::class);
+    }
+
+    public function photo() {
+        return $this->morphOne(Photo::class, 'imageable');
     }
 }
